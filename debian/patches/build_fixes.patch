@@ -1,0 +1,37 @@
+Description: correct nodejs name and fix vows + uglifyjs usage
+ Name of node is nodejs in Debian and vows packaged separately.
+ Output switch of uglifyjs and its option must be the first one, otherwise
+ result is printed on stdout only.
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Last-Update: 2013-04-28
+
+---
+
+--- queue-async-1.0.4.orig/Makefile
++++ queue-async-1.0.4/Makefile
+@@ -5,21 +5,21 @@ all: \
+ 
+ component.json: src/component.js queue.js
+ 	@rm -f $@
+-	node src/component.js > $@
++	nodejs src/component.js > $@
+ 	@chmod a-w $@
+ 
+ package.json: src/package.js queue.js
+ 	@rm -f $@
+-	node src/package.js > $@
++	nodejs src/package.js > $@
+ 	@chmod a-w $@
+ 
+ test: all
+-	node_modules/.bin/vows
++	vows
+ 	@echo
+ 
+ %.min.js: %.js Makefile
+ 	@rm -f $@
+-	node_modules/.bin/uglifyjs $< -c -m -o $@
++	uglifyjs -o $@ $< -c -m
+ 
+ clean:
+ 	rm -f queue.min.js component.json package.json

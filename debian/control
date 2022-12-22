@@ -1,0 +1,35 @@
+Source: queue-async
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-vows <!nocheck>
+ , uglifyjs
+Standards-Version: 4.5.1
+Homepage: https://github.com/mbostock/queue
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: libjs-queue-async
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: javascript-common
+ , libjs-jquery
+Multi-Arch: foreign
+Description: asynchronous helper library for JavaScript
+ Yet another asynchronous helper library for JavaScript. Think of it as a
+ minimalist version of Async.js that allows fine-tuning over parallelism. Or,
+ think of it as a version of TameJs that does not use code generation.
+
+Package: node-queue-async
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: asynchronous helper library for JavaScript - NodeJS
+ Yet another asynchronous helper library for JavaScript. Think of it as a
+ minimalist version of Async.js that allows fine-tuning over parallelism. Or,
+ think of it as a version of TameJs that does not use code generation.
+ .
+ This package contains the NodeJS module.

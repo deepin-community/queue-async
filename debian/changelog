@@ -1,0 +1,44 @@
+queue-async (1.0.7-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ lintian-brush ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Replace deprecated node-uglify by uglifyjs (Closes: #979952)
+  * Use dh-sequence-nodejs auto install
+  * Enable upstream test (vows)
+  * Apply multi-arch hints
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 Jan 2021 13:20:45 +0100
+
+queue-async (1.0.7-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 03:09:01 +0100
+
+queue-async (1.0.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Standards-Version to 3.9.5 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 28 Jan 2014 21:17:09 +0100
+
+queue-async (1.0.4-1) unstable; urgency=low
+
+  * Initial release (closes: #706360).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 28 Apr 2013 22:11:34 +0200
